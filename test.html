@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign up for newsletter</title>
+  <link rel="stylesheet" href="css/normalize.css">
+</head>
+  <body>
+
+    <style>
+    	.contact-fieldset > *,
+    	textarea {
+    	  display: block;
+    	  width: 100%;
+    	}
+    ​
+    	.newsletter-fieldset {
+    	  display: flex;
+    	}
+    ​
+    	.newsletter-fieldset > * {
+    	  width: 40%;
+    	  flex: 1 40%;
+    		/* flex-basis: 100px; */
+    		/* flex: 1 1 100px; */
+    	}
+    </style>
+    ​
+    <fieldset class="newsletter-fieldset">
+    	<legend>Newsletter</legend>
+    	<p>Select the newsletters you would like to receive</p>
+    	<input type="checkbox" id="html-news" name="newsletter_pref" value="HTML News">
+    	<label for="html-news">HTML News</label>
+    	<input type="checkbox" id="css-news" name="newsletter_pref" value="CSS News">
+    	<label for="css-news">CSS News</label>
+    	<input type="checkbox" id="js-news" name="newsletter_pref" value="Javascript News">
+    	<label for="js-news">Javascript News</label>
+    	<p>Newsletter format</p>
+    	<input type="radio" id="HTML" name="format_pref" value="HTML">
+    	<label for="HTML">HTML</label>
+    	<input type="radio" id="plain-text" name="format_pref" value="Plain text">
+    	<label for="HTML">Plain text</label>
+    	<label for="other-topics">Other topics you'd like to hear about</label>
+    	<textarea id="other-topics" name="newsletter_other" rows="8" cols="80"></textarea>
+    </fieldset>
+
+  </body>
+
+
+
+
+</html>
