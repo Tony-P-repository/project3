@@ -26,28 +26,28 @@
             <ul class="flex">
               <li>
                 <label for="full-name">Full Name</label>
-                <input type="text" id="full-name" name="user_name" value="" placeholder="Required">
+                <input type="text" id="full-name" name="user_name" value="" placeholder="Required" required>
               </li>
               <li>
-                <label for="Email Address">Email Address</label>
-                <input type="email" id="email-address" name="user_email" value="" placeholder="Required">
+                <label for="email-address">Email Address</label>
+                <input type="email" id="email-address" name="user_email" value="" placeholder="Required" required>
               </li>
               <li>
                 <label for="phone-number">Phone Number</label>
-                <input type="tel" id="phone-number" name="user_phone" value="">
+                <input type="tel" id="phone-number" name="user_phone" value="" placeholder="Optional">
               </li>
               <li>
                 <label for="street-address">Street Address</label>
-                <input type="text" id="street-address" name="user_street" value="">
+                <input type="text" id="street-address" name="user_street" value="" placeholder="Optional">
               </li>
               <li>
                 <label for="city">City</label>
-                <input type="text" id="city" name="user_city" value="">
+                <input type="text" id="city" name="user_city" value="" placeholder="Optional">
               </li>
               <li>
                 <label for="state">State</label>
                 <select id="state" name="user_state">
-                  <option value="1" selected>Choose State</option>
+                  <option value="" hidden selected>Choose State</option>
                   <option value="AL">Alabama</option>
                 	<option value="AK">Alaska</option>
                 	<option value="AZ">Arizona</option>
@@ -102,7 +102,7 @@
                 </select>
               <li>
                 <label for="zip-code">Zip Code</label>
-                <input type="text" id="zip-code" name="user_zip_code" value="">
+                <input type="text" id="zip-code" name="user_zip_code" value="" placeholder="Optional">
               </li>
             </ul>
           </fieldset>
@@ -137,7 +137,7 @@
               </li>
               <li>
                 <label for="other-topics">Other topics you'd like to hear about</label>
-                <textarea id="other-topics" name="newsletter_other" rows="5" cols="80"></textarea>
+                <textarea id="other-topics" name="newsletter_other" rows="5" cols="80" placeholder="Optional"></textarea>
               </li>
             </ul>
           </fieldset>
@@ -148,7 +148,7 @@
             <p>Copyright The Code Review</p>
           </footer>
         </form>
-
+      </div>
     </main>
 
   </body>
