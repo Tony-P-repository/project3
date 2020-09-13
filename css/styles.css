@@ -1,4 +1,6 @@
 
+/* ======================== layout ====================== */
+
 * {
   box-sizing: border-box;
 }
@@ -15,20 +17,46 @@ h1
   text-align: center;
 }
 
-.contact-fieldset > *,
 textarea {
-  display: block;
   width: 100%;
 }
 
-.newsletter-fieldset {
+.flex {
   display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
 }
 
-.newsletter-fieldset > * {
-  width: 40%;
-  flex: 1 100px;
-  margin: 0;
+.contact-fieldset .flex > li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.newsletter-fieldset .flex > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ======================== spacing ====================== */
+
+.form-container {
+  max-width: 620px;
+  margin: 0 auto;
+  width: calc(160px + 50%);
+}
+
+.flex label,
+.flex input {
+  margin: 3px 5px;
+}
+
+.flex label[for="other-topics"] {
+  margin-top: 20px;
 }
 
 form > * {
@@ -37,24 +65,173 @@ form > * {
   padding: 15px;
 }
 
-.contact-fieldset > label {
-  margin: 14px 0 0;
+.contact-fieldset label {
+  margin: 18px 0 0;
 }
 
-.contact-fieldset > input {
+.contact-fieldset input,
+.contact-fieldset select,
+.newsletter-fieldset textarea {
   margin: 7px 0 0;
 }
 
-form header::after {
+form header::after,
+form .contact-fieldset::after {
   content: "";
   display: block;
+  margin: 45px 0 20px;
+}
+
+form header::after {
   height: 3px;
   border-bottom: 2px solid black;
   border-top: 4px solid black;
 }
 
+form .contact-fieldset::after {
+  border-bottom: 2px solid black;
+}
+
+footer p {
+  margin: 0;
+}
+
+.main-header {
+  padding: 10px 0;
+}
+
+/* ======================== fonts and styles ====================== */
+
+input,
+textarea,
+select {
+  border: none;
+  background-color: #eff0f1;
+  padding: 15px 20px;
+  border-radius: 5px;
+  resize: none;
+
+  color: #9da3a8;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#zip-code {
+  width: 10em;
+}
+
+button {
+  display: block;
+  width: 100%;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4ebbb5;
+
+  color: white;
+}
+
+* {
+  font-family: 'Merriweather', serif;
+  color: #495d70;
+}
+
 .main-header {
   background-color: #2d3945;
+}
+
+h1 {
   text-transform: uppercase;
   color: white;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.form-header p {
+  color: #9da3a8;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+h2,
+h3,
+legend {
+  color: #2d3945;
+  font-size: 19px;
+  font-weight: 900;
+}
+
+label,
+.newsletter-fieldset p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+button {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.form-footer p {
+  color: #9da3a8;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+input::placeholder {
+  text-align: right;
+  color: #a8adb2;
+  font-size: 12px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+select option:first-child {
+  color: #a8adb2;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+
+/* ======================== interactive ====================== */
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #46698b;
+}
+
+/* ======================== media ====================== */
+
+@media (min-width: 768px) {
+
+  .contact-fieldset .flex > li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 8px 0;
+  }
+
+  .contact-fieldset li > *:not(#zip-code) {
+    flex: 1;
+  }
+
+  .contact-fieldset li > label:not(#zip-code) {
+    flex: 0 140px;
+    margin-top: 0;
+  }
+
+  .contact-fieldset input {
+    margin-top: 0;
+  }
+
+  .contact-fieldset label,
+  .contact-fieldset p,
+  .newsletter-fieldset p,
+  .newsletter-fieldset label {
+    font-weight: 400;
+  }
+
 }
